@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ロジスティック</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<html class="yui3-cssreset">
+</head>
+<body>
+<h1>指示書登録</h1>
+<form method = "post" action="add.php" enctype="multipart/form-data">
+    <p><label>タイトル</label><br>
+    <input type="text" class="form-title" name="title" required></p>
+    <p><label>タスク:</label>
+    <input type="radio" class="form-radio" name="task" value="内職あり" checked>内職あり
+    <input type="radio" class="form-radio" name="task" value="出荷">出荷
+    <input type="radio" class="form-radio" name="task" value="保管">保管</p>
+    <p><label>入荷予定日:</label>
+    <input type="date" class="form-date" name="instock" required><br>
+    <label>出荷予定日:</label>
+    <input type="date" class="form-date" name="shipment" required><p>
+    <p><label>入荷数:</label>
+    <input type="number" class="form-arrivals" min="1" max="100000" name="arrivals">
+    <select name="arrival_unit" class="form-unit" required>
+        <option value="">--</option>
+        <option value="個">個</option>
+        <option value="枚">枚</option>
+        <option value="セット">セット</option>
+    </select><br>
+    <label>予備数:</label>
+    <input type="number" class="form-reserve" min="1" max="1000" name="reserve">
+    <select name="reserve_unit" class="form-unit">
+        <option value="">--</option>
+        <option value="個">個</option>
+        <option value="枚">枚</option>
+        <option value="セット">セット</option>
+    </select></p>
+    <p><label>コメント</label><br>
+    <textarea name="comment" class="form-comment" cols="40" rows="4" maxlength="150" placeholder="備考欄等を入力してください。"></textarea></p>
+    <label>イメージ:</label>
+    <input type="file" name="file" class="form-file">
+    <br>
+    <p><label>送付先</label><br>
+    <input type="number" class="form-post" name="postcode" placeholder="7桁の郵便番号を入力"><br>
+    <input type="text" class="form-address" name="prefecture" placeholder="〇〇県"><br>
+    <input type="text" class="form-address" name="city" placeholder="〇〇市〇〇区">
+    <br>
+    <input type="text" class="form-address" name="address" placeholder="〇〇町123"><br>
+    <input type="text" class="form-address" name="building" placeholder="〇〇ビル"><br>
+    <input type="telephone" class="form-phone" name="phone" placeholder="電話番号"></p>
+    <p><input type="submit" class="form-submit" value="確定"></p>
+    </form>
+</body>
+</html>

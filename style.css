@@ -1,0 +1,76 @@
+body {
+    margin: auto;
+    text-align: center;
+}
+h1 {
+    font-size: 24px;
+    text-align: center;
+    background-color: lime;
+    color: white;
+    padding: 5px 10px;
+}
+input[type="text"].form-title {
+    width: 250px;
+    height: 20px;
+    border: 2px solid lime;
+    text-align: center;
+}
+input[type="date"] {
+    width: 170px;
+    height: 20px;
+    border: 2px solid lime;
+    text-align: center;
+}
+input[type="number"].form-arrivals {
+    width: 150px;
+    height: 20px;
+    border: 2px solid lime;
+    text-align: center;
+}
+input[type="number"].form-reserve {
+    width: 150px;
+    height: 20px;
+    border: 2px solid lime;
+    text-align: center;
+}
+select {
+    width: 50px;
+    height: 25px;
+    border: 2px solid lime;
+    text-align: center;
+}
+textarea {
+    width: 250px;
+    height: 200pxpx;
+    border: 2px solid lime;
+    text-align: center;
+}
+input[type="number"].form-post {
+    width: 250px;
+    height: 20px;
+    border: 2px solid lime;
+    text-align: center;
+}
+input[type="text"].form-address {
+    width: 250px;
+    height: 20px;
+    border: 2px solid lime;
+    text-align: center;
+}
+input[type="telephone"].form-phone {
+    width: 250px;
+    height: 20px;
+    border: 2px solid lime;
+    text-align: center;
+}
+input[type="submit"].form-submit {
+    width: 200px;
+    height: 50px;
+    background-color: lime;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    border: solid;
+    border-radius: 10px;
+    cursor: pointer;
+}
