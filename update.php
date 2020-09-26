@@ -45,7 +45,7 @@ try {
     $stmt->execute();
     $dbh = null;
     echo "ID: " . htmlspecialchars($id,ENT_QUOTES,'UTF-8') . "更新が完了しました。<br>";
-    echo "<a href='index.php'>トップページに戻る。</a>";
+    echo "<a href='toppage.php'>トップページに戻る。</a>";
 } catch (Exception $e) {
     echo "エラー発生: " . htmlspecialchars($e->getMessage(), ENT_QUOTES, 'UTF-8') . "<br>";
     die();

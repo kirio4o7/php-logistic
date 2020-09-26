@@ -7,7 +7,7 @@
 </head>
 <body>
 <h1>指示書の詳細表示</h1>
-<a href="index.php">トップページへ戻る</a>
+<a href="toppage.php">トップページへ戻る</a>
 <?php
 $user = "kirikihira_logi";
 $pass = "Kirio4o7";
@@ -55,7 +55,7 @@ try {
     echo "</tr>";
     echo "<tr>";
     echo "<th>イメージ表示</th>";
-    echo "<td>" . '<img src="img.php?img_name' . '">';"</td>";
+    echo '<td><img src="', $file, '"></td>';
     echo "</tr>";
     echo "</table>";
     $dbh = null;
