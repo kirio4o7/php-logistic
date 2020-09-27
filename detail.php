@@ -53,10 +53,6 @@ try {
     echo "<th>送付先</th>";
     echo "<td>" . "〒",$result['postcode'],"<br>" . $result['prefecture'] . $result['city'] . $result['address'],"<br>" . $result['building'],"<br>" . $result['phone'] . "</td>";
     echo "</tr>";
-    echo "<tr>";
-    echo "<th>イメージ表示</th>";
-    echo '<td><img src="', $file, '"></td>';
-    echo "</tr>";
     echo "</table>";
     $dbh = null;
 } catch (Exception $e) {
