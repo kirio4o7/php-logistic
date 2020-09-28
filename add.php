@@ -1,6 +1,6 @@
 <?php
-$user = "kirikihira_logi";
-$pass = "Kirio4o7";
+$user = "b054867f19b177";
+$pass = "21bf45d9";
 $title = $_POST['title'];
 $task = $_POST['task'];
 $instock = $_POST['instock'];
@@ -10,7 +10,6 @@ $arrival_unit = $_POST['arrival_unit'];
 $reserve = (int) $_POST['reserve'];
 $reserve_unit = $_POST['reserve_unit'];
 $comment = $_POST['comment'];
-$file = $_FILES['file']['name'];
 $postcode = (int) $_POST['postcode'];
 $prefecture = $_POST['prefecture'];
 $city = $_POST['city'];
@@ -18,10 +17,10 @@ $address = $_POST['address'];
 $building = $_POST['building'];
 $phone = $_POST['phone'];
 try {
-    $dbh = new PDO('mysql:host=localhost;dbname=logistic;charset=utf8', $user,$pass);
+    $dbh = new PDO('mysql:host=us-cdbr-east-02.cleardb.com;dbname=heroku_e74293fa78c68bd;charset=utf8', $user,$pass);
     $dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "INSERT INTO directed (title, task, instock, shipment, arrivals, arrival_unit, reserve, reserve_unit, comment, file, postcode, prefecture, city, address, building, phone) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO directed (title, task, instock, shipment, arrivals, arrival_unit, reserve, reserve_unit, comment, postcode, prefecture, city, address, building, phone) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     $stmt = $dbh->prepare($sql);
     $stmt->bindValue(1, $title, PDO::PARAM_STR);
     $stmt->bindValue(2, $task, PDO::PARAM_STR);
@@ -32,27 +31,12 @@ try {
     $stmt->bindValue(7, $reserve, PDO::PARAM_INT);
     $stmt->bindValue(8, $reserve_unit, PDO::PARAM_STR);
     $stmt->bindValue(9, $comment, PDO::PARAM_STR);
-    $stmt->bindValue(10, $file, PDO::PARAM_STR);
-    if (id_uploaded_file($_FILES['file']['tmp_name'])) {
-        if (!file_exist('upload')) {
-            mkdir('upload');
-        }
-        $file='upload/'.basename($_FILES['file']['name']);
-        if (move_uploaded_file($_FILES['file']['tmp_name'], $file)) {
-            echo $file, 'のアップロードに成功しました。';
-            echo '<p><img src="', $file, '"></p>';
-        } else {
-            echo 'アップロードに失敗しました。';
-        }
-    } else {
-        echo 'ファイルを選択してください。';
-    }
-    $stmt->bindValue(11, $postcode, PDO::PARAM_INT);
-    $stmt->bindValue(12, $prefecture, PDO::PARAM_STR);
-    $stmt->bindValue(13, $city, PDO::PARAM_STR);
-    $stmt->bindValue(14, $address, PDO::PARAM_STR);
-    $stmt->bindValue(15, $building, PDO::PARAM_STR);
-    $stmt->bindValue(16, $phone, PDO::PARAM_STR);
+    $stmt->bindValue(10, $postcode, PDO::PARAM_INT);
+    $stmt->bindValue(11, $prefecture, PDO::PARAM_STR);
+    $stmt->bindValue(12, $city, PDO::PARAM_STR);
+    $stmt->bindValue(13, $address, PDO::PARAM_STR);
+    $stmt->bindValue(14, $building, PDO::PARAM_STR);
+    $stmt->bindValue(15, $phone, PDO::PARAM_STR);
     $stmt->execute();
     $dbh = null;
     echo "登録が完了しました。<br>";
