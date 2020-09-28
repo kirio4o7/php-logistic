@@ -9,7 +9,7 @@
 <h1>登録情報の一覧</h1>
 <a href="logout.php">ログアウト</a>
 <a href="signup.php">新規登録</a><br>
-<a href="form.html">指示書の新規登録</a>
+<a href="form.html">指示書新規登録</a>
 <?php
 $user = "b054867f19b177";
 $pass = "21bf45d9";
