@@ -1,6 +1,6 @@
 <?php
-$user = "b054867f19b177";
-$pass = "21bf45d9";
+$user = "baf996ddc765af";
+$pass = "e503f039";
 $title = $_POST['title'];
 $task = $_POST['task'];
 $instock = $_POST['instock'];
@@ -17,7 +17,7 @@ $address = $_POST['address'];
 $building = $_POST['building'];
 $phone = $_POST['phone'];
 try {
-    $dbh = new PDO('mysql:host=us-cdbr-east-02.cleardb.com;dbname=heroku_e74293fa78c68bd;charset=utf8', $user,$pass);
+    $dbh = new PDO('mysql:host=us-cdbr-east-02.cleardb.com;dbname=heroku_e49a6621e69f98e;charset=utf8', $user, $pass);
     $dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $sql = "INSERT INTO directed (title, task, instock, shipment, arrivals, arrival_unit, reserve, reserve_unit, comment, postcode, prefecture, city, address, building, phone) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";

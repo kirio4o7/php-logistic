@@ -11,10 +11,10 @@
 <a href="signup.php">新規登録</a><br>
 <a href="form.html">指示書新規登録</a>
 <?php
-$user = "b054867f19b177";
-$pass = "21bf45d9";
+$user = "baf996ddc765af";
+$pass = "e503f039";
 try {
-    $dbh = new PDO('mysql:host=us-cdbr-east-02.cleardb.com;dbname=heroku_e74293fa78c68bd;charset=utf8', $user, $pass);
+    $dbh = new PDO('mysql:host=us-cdbr-east-02.cleardb.com;dbname=heroku_e49a6621e69f98e;charset=utf8', $user, $pass);
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $sql = "SELECT * FROM directed";
     $stmt = $dbh->query($sql);
