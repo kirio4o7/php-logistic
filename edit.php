@@ -1,10 +1,10 @@
 <?php
-$user = "kirikihira_logi";
-$pass = "Kirio4o7";
+$user = "b054867f19b177";
+$pass = "21bf45d9";
 try {
     if (empty($_GET['id'])) throw new Exception('ID不正');
     $id = (int) $_GET['id'];
-    $dbh = new PDO('mysql:host=localhost;dbname=logistic;charset=utf8', $user, $pass);
+    $dbh = new PDO('mysql:host=us-cdbr-east-02.cleardb.com;dbname=heroku_e74293fa78c68bd;charset=utf8', $user, $pass);
     $dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $sql = "SELECT * FROM directed WHERE id = ?";
