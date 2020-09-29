@@ -1,6 +1,6 @@
 <?php
-$user = "b054867f19b177";
-$pass = "21bf45d9";
+$user = "baf996ddc765af";
+$pass = "e503f039";
 $title = $_POST['title'];
 $task = $_POST['task'];
 $instock = $_POST['instock'];
@@ -19,7 +19,7 @@ $phone = $_POST['phone'];
 try {
     if (empty($_POST['id'])) throw new Exception('ID不正');
     $id = (int) $_POST['id'];
-    $dbh = new PDO('mysql:host=us-cdbr-east-02.cleardb.com;dbname=heroku_e74293fa78c68bd;charset=utf8', $user, $pass);
+    $dbh = new PDO('mysql:host=us-cdbr-east-02.cleardb.com;dbname=heroku_e49a6621e69f98e;charset=utf8', $user, $pass);
     $dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $sql = "UPDATE directed SET title = ?, task = ?, instock = ?, shipment = ?, arrivals = ?, arrival_unit = ?, reserve = ?, reserve_unit = ?, comment = ?, postcode = ?, prefecture = ?, city = ?, address = ?, building = ?, phone = ? WHERE id = ?";
