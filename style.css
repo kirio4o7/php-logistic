@@ -75,13 +75,14 @@ input[type="submit"].form-submit {
     cursor: pointer;
 }
 table {
-    margin: 10px auto;
+    margin: auto;
+     text-align: left;
 }
 th {
     border: solid 1px black;
-    padding: 5px 20px;
+    padding: 10px 50px;
 }
 td {
     border: solid 1px black;
-    padding: 5px 20px;
+    padding: 10px 50px 10px 5px;
 }
