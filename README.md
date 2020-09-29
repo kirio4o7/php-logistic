@@ -7,7 +7,7 @@ https://glacial-caverns-63699.herokuapp.com
 - アプリケーション名「ロジスティックシステム」
 - phpを用いてwebアプリケーションを作成。
 
-![サンプル画像](2020-09-29 21.14.34.png)
+![サンプル画像](https://raw.githubusercontent.com/kirio4o7/php-logistic/master/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202020-09-29%2021.14.34.png)
 
 ## このアプリケーションを作成した経緯
 - 前職でこのようなアプリケーションツールがあれば便利だなと思い。
