@@ -5,7 +5,7 @@ https://glacial-caverns-63699.herokuapp.com
 
 ## 概要
 - アプリケーション名[ロジスティックシステム]
-　phpを用いてwebアプリケーションを作成したいと思い約2週間で作成、
+　phpを用いてwebアプリケーションを作成、
 
 
 
