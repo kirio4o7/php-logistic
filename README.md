@@ -3,6 +3,10 @@
 ## リンク
 https://glacial-caverns-63699.herokuapp.com
 
+## テスト用アカウント
+email:logistic@gmail.com
+password:logi1234
+
 ## 概要
 - アプリケーション名「ロジスティックシステム」
 - phpを用いてwebアプリケーションを作成。
